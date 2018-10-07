@@ -13,3 +13,7 @@ html = urlopen(url)
 soup = BeautifulSoup(html, 'lxml')
 
 # next step is to access results table, which is not in a HTML table...
+# rows variable is first step to getting results table into Pandas dataframe:
+rows=[]
+for EachPart in soup.select('div[class*="views-row views-row-"]'):
+    rows.append(EachPart.get_text())
