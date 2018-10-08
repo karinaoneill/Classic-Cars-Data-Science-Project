@@ -31,5 +31,5 @@ for i in rows:
     rowssplit.append(i)
     
 for i in range(0,len(rowssplit)-1):
-    del rowssplit[i][-1], rowssplit[i][-1], rowssplit[i][0]   #remove fields that i won't use
+    del rowssplit[i][0], rowssplit[i][-1], rowssplit[i][-1], rowssplit[i][-2]   #remove fields that i won't use
     rowssplit[0][-1] = re.sub('\n', '', rowssplit[0][-1])   #take \n off price
