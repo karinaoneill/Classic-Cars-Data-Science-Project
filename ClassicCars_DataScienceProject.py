@@ -39,3 +39,5 @@ for i in range(0,len(rowssplit)):
 
 df = pd.DataFrame(rowssplit)
 df.columns = ['Make', 'Model', 'Year', 'Date', 'Price']
+
+#pagination - so far only taking 1st page of auction results
