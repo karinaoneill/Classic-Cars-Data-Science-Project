@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import re
 %matplotlib inline
 from urllib.request import urlopen   #to extract data from html files
 from bs4 import BeautifulSoup   #bs4 = Beautiful Soup v4
