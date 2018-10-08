@@ -22,3 +22,13 @@ using *= selector because div class names are named differently,
 rows=[]
 for EachPart in soup.select('div[class*="views-row views-row-"]'):
     rows.append(EachPart.get_text())
+
+rowssplit=[]
+
+for i in rows:
+    i=i.split(' \n')
+    rowssplit.append(i)
+    
+for i in range(0,len(rowssplit)-1):
+    del rowssplit[i][-1], rowssplit[i][-1], rowssplit[i][0]   #remove fields that i won't use
+    rowssplit[0][-1] = re.sub('\n', '', rowssplit[0][-1])   #take \n off price
