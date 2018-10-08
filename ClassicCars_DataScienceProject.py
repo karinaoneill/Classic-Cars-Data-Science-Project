@@ -36,3 +36,6 @@ for i in range(0,len(rowssplit)):
     for j in range(0,4):   #to delete the field name info (i.e. 'Make:  ' etc). https://stackoverflow.com/questions/25045373/use-regex-re-sub-to-remove-everything-before-and-including-a-specified-word
         if ":  " in rowssplit[i][j]:
             rowssplit[i][j] = re.sub('^(.*:  )','',rowssplit[i][j])
+
+df = pd.DataFrame(rowssplit)
+df.columns = ['Make', 'Model', 'Year', 'Date', 'Price']
