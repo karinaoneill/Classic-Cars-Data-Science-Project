@@ -1,6 +1,6 @@
 # Classic Cars Data Science Project
 
-- Webscraping (classic car auction data!) - with Python script, BeautifulSoup, ...
+- Webscraping (classic car auction data!) - with Python script, BeautifulSoup, ... DONE ✓
 - Data analysis
 - Predictive analysis/machine learning
 - Interactive data visualisation
