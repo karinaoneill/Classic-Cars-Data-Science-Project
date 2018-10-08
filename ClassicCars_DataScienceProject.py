@@ -32,7 +32,7 @@ for i in rows:
     
 for i in range(0,len(rowssplit)):
     del rowssplit[i][0], rowssplit[i][-1], rowssplit[i][-1], rowssplit[i][-2]   #remove fields that i won't use
-    rowssplit[i][-1] = re.sub('\n', '', rowssplit[0][-1])   #take \n off price
+    rowssplit[i][-1] = re.sub('\n', '', rowssplit[i][-1])   #take \n off price
     for j in range(0,4):   #to delete the field name info (i.e. 'Make:  ' etc). https://stackoverflow.com/questions/25045373/use-regex-re-sub-to-remove-everything-before-and-including-a-specified-word
         if ":  " in rowssplit[i][j]:
             rowssplit[i][j] = re.sub('^(.*:  )','',rowssplit[i][j])
