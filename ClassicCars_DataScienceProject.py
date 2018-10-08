@@ -30,6 +30,8 @@ for i in rows:
     i=i.split(' \n')
     rowssplit.append(i)
     
-for i in range(0,len(rowssplit)-1):
+for i in range(0,len(rowssplit)):
     del rowssplit[i][0], rowssplit[i][-1], rowssplit[i][-1], rowssplit[i][-2]   #remove fields that i won't use
-    rowssplit[0][-1] = re.sub('\n', '', rowssplit[0][-1])   #take \n off price
+    rowssplit[i][-1] = re.sub('\n', '', rowssplit[0][-1])   #take \n off price
+    #for j in range(0,4):
+     #   if ":  " in rowssplit[i][j]:
