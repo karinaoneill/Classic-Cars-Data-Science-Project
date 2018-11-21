@@ -11,12 +11,15 @@
     <script src="ClassicCars_DataScienceProject.py"></script>
     <script type="text/javascript" src="tooltips.js"></script>
    <style type="text/css">
+       <!-- # is for IDs and . is for classes. Id applies to one element only, whereas class can apply to more than one. -->
        #header {
            margin: 25px;
+           position:relative;
        }
        #wrapper {
            display: flex;
            width:90%;
+           position:relative;
        }
        #wrapper div {
            flex-basis: 100%;
@@ -25,10 +28,17 @@
        .left {
            border-style: double;
            padding: 25px;
+           position:relative;
        }
        .right {
            border-style: double;
            padding: 25px;
+           position:relative;
+       }
+       #datatable {
+           border-style: double;
+           padding: 25px;
+           position:relative;
        }
     </style>
     </head>
@@ -47,12 +57,14 @@
         <p><b>Workings:</b></p>
         <ul>
             <li>#pagination - so far only taking 1st page of auction results. loop through each url, updating page=n at end of url</li>
-            <li>Data Table - Pandas Dataframe:</li>
         </ul>
     </div>
     <div class="right">
         <img src="car-assembly-line-factory.png" width=100%>
     </div>
+    </div>
+    <div id="datatable">
+        <p><b>Data Table - Pandas Dataframe:</b></p>
     </div>
     </body>
 </html>
